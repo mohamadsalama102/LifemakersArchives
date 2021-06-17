@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71B94E14-9D4A-44D3-943A-79F3C6209112}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LifemakersArchives</RootNamespace>
+    <AssemblyName>LifemakersArchives</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>User.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rkmy\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\campaignsControllers.cs" />
+    <Compile Include="Controllers\ExportData.cs" />
+    <Compile Include="Controllers\HrPhoneControllers.cs" />
+    <Compile Include="Controllers\volunteerHours.cs" />
+    <Compile Include="Controllers\Connectiondb.cs" />
+    <Compile Include="Controllers\co_TeamControllers.cs" />
+    <Compile Include="Controllers\eventsControllers.cs" />
+    <Compile Include="Controllers\exceptionsControllers.cs" />
+    <Compile Include="Controllers\relationsControllers.cs" />
+    <Compile Include="Forms\campaignsFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\campaignsFormControllers.Designer.cs">
+      <DependentUpon>campaignsFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\exceptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\exceptionsForm.Designer.cs">
+      <DependentUpon>exceptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\exceptionsFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\exceptionsFormControllers.Designer.cs">
+      <DependentUpon>exceptionsFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormShowData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormShowData.Designer.cs">
+      <DependentUpon>FormShowData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HrControllers.cs" />
+    <Compile Include="Controllers\meetingsControllers.cs" />
+    <Compile Include="Controllers\opposedControllers.cs" />
+    <Compile Include="Controllers\sillsControllers.cs" />
+    <Compile Include="Controllers\trainingControllers.cs" />
+    <Compile Include="Forms\campaignsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\campaignsForm.Designer.cs">
+      <DependentUpon>campaignsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\eventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\eventsForm.Designer.cs">
+      <DependentUpon>eventsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HrForm.Designer.cs">
+      <DependentUpon>HrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HrFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HrFormControllers.Designer.cs">
+      <DependentUpon>HrFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LifemakersArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LifemakersArchives.Designer.cs">
+      <DependentUpon>LifemakersArchives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\meetingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\meetingsForm.Designer.cs">
+      <DependentUpon>meetingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\meetingsFormControlles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\meetingsFormControlles.Designer.cs">
+      <DependentUpon>meetingsFormControlles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\opposedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\opposedForm.Designer.cs">
+      <DependentUpon>opposedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\opposedFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\opposedFormControllers.Designer.cs">
+      <DependentUpon>opposedFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\relationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\relationsForm.Designer.cs">
+      <DependentUpon>relationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\relationsFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\relationsFormControllers.Designer.cs">
+      <DependentUpon>relationsFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\sillsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\sillsForm.Designer.cs">
+      <DependentUpon>sillsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\sillsFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\sillsFormControllers.Designer.cs">
+      <DependentUpon>sillsFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\training.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\training.Designer.cs">
+      <DependentUpon>training.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\trainingFormControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\trainingFormControllers.Designer.cs">
+      <DependentUpon>trainingFormControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\volunteerHoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\volunteerHoursForm.Designer.cs">
+      <DependentUpon>volunteerHoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\campaignsFormControllers.resx">
+      <DependentUpon>campaignsFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\exceptionsForm.resx">
+      <DependentUpon>exceptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\exceptionsFormControllers.resx">
+      <DependentUpon>exceptionsFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormShowData.resx">
+      <DependentUpon>FormShowData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\campaignsForm.resx">
+      <DependentUpon>campaignsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\eventsForm.resx">
+      <DependentUpon>eventsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HrForm.resx">
+      <DependentUpon>HrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HrFormControllers.resx">
+      <DependentUpon>HrFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\meetingsForm.resx">
+      <DependentUpon>meetingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\meetingsFormControlles.resx">
+      <DependentUpon>meetingsFormControlles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\opposedForm.resx">
+      <DependentUpon>opposedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\opposedFormControllers.resx">
+      <DependentUpon>opposedFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\relationsForm.resx">
+      <DependentUpon>relationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\relationsFormControllers.resx">
+      <DependentUpon>relationsFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\sillsForm.resx">
+      <DependentUpon>sillsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\sillsFormControllers.resx">
+      <DependentUpon>sillsFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\training.resx">
+      <DependentUpon>training.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\trainingFormControllers.resx">
+      <DependentUpon>trainingFormControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\volunteerHoursForm.resx">
+      <DependentUpon>volunteerHoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="User.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
